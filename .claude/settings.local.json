@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(npm install:*)",
+      "Bash(find:*)",
+      "Bash(powershell:*)",
+      "Bash(timeout:*)",
+      "Bash(git init:*)",
+      "Bash(gh:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

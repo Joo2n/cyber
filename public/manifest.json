@@ -1,0 +1,104 @@
+{
+  "name": "토마토패스 사이버 연수원",
+  "short_name": "토마토패스",
+  "description": "최고 품질의 온라인 교육 서비스를 제공하는 사이버연수원",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "lang": "ko",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "대시보드 화면"
+    },
+    {
+      "src": "/screenshots/mobile-1.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "모바일 대시보드"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "나의 강의실",
+      "short_name": "강의실",
+      "description": "나의 강의실로 빠르게 이동",
+      "url": "/classroom",
+      "icons": [{ "src": "/icons/shortcut-classroom.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "수강신청",
+      "short_name": "수강신청",
+      "description": "새로운 강의 수강신청",
+      "url": "/courses",
+      "icons": [{ "src": "/icons/shortcut-courses.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "수료증",
+      "short_name": "수료증",
+      "description": "나의 수료증 확인",
+      "url": "/certificates",
+      "icons": [{ "src": "/icons/shortcut-certificates.png", "sizes": "96x96" }]
+    }
+  ]
+}

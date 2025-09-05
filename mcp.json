@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "figma-mcp": {
+      "command": "bunx",
+      "args": [
+        "cursor-talk-to-figma-mcp@latest"
+      ],
+      "env": {
+        "FIGMA_WEBSOCKET_URL": "ws://localhost:3055"
+      }
+    }
+  }
+}

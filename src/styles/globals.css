@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-neutral-200;
+  }
+  
+  body {
+    @apply bg-neutral-50 text-neutral-900;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  /* 기본 버튼 스타일 */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark focus:ring-primary;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-dark focus:ring-secondary;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary;
+  }
+  
+  /* 입력 필드 스타일 */
+  .input {
+    @apply w-full h-12 px-4 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200;
+  }
+  
+  .input-error {
+    @apply border-error focus:ring-error;
+  }
+  
+  /* 카드 스타일 */
+  .card {
+    @apply bg-white rounded-xl shadow-soft border border-neutral-200;
+  }
+  
+  .card-body {
+    @apply p-6;
+  }
+  
+  /* 로딩 애니메이션 */
+  .loading {
+    @apply animate-spin rounded-full border-2 border-neutral-300 border-t-primary;
+  }
+  
+  /* 진도바 스타일 */
+  .progress-bar {
+    @apply w-full bg-neutral-200 rounded-full h-2 overflow-hidden;
+  }
+  
+  .progress-fill {
+    @apply h-full bg-primary transition-all duration-300 ease-out;
+  }
+
+  /* 비디오 플레이어 커스텀 스타일 */
+  .video-player input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .video-player input[type="range"]::-webkit-slider-track {
+    background: rgba(255, 255, 255, 0.3);
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  .video-player input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: white;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .video-player input[type="range"]::-moz-range-track {
+    background: rgba(255, 255, 255, 0.3);
+    height: 4px;
+    border-radius: 2px;
+    border: none;
+  }
+
+  .video-player input[type="range"]::-moz-range-thumb {
+    background: white;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+  }
+
+  /* 텍스트 말줄임 유틸리티 */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* 접근성: 스크린 리더 전용 클래스 */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .sr-only.focus:not(.sr-only):focus {
+    @apply static w-auto h-auto p-0 m-0 overflow-visible whitespace-normal;
+    clip: auto;
+  }
+
+  /* 포커스 표시 개선 */
+  .focus-visible:focus-visible {
+    @apply outline-2 outline-primary outline-offset-2;
+  }
+
+  /* Skip to content 링크 */
+  .skip-link {
+    @apply absolute -top-10 left-1.5 bg-primary text-white px-4 py-2 rounded text-sm font-medium z-50 transition-all duration-300;
+  }
+
+  .skip-link:focus {
+    @apply top-1.5;
+  }
+
+  /* 다크 모드 스타일 */
+  @media (prefers-color-scheme: dark) {
+    .dark .card {
+      @apply bg-neutral-800 border-neutral-700;
+    }
+    
+    .dark .input {
+      @apply bg-neutral-800 border-neutral-600 text-white;
+    }
+    
+    .dark .progress-bar {
+      @apply bg-neutral-700;
+    }
+  }
+}
