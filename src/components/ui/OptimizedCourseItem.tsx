@@ -16,7 +16,7 @@ interface CourseItemProps {
   certificate?: {
     courseId: string
     issuedAt: string
-    certificateUrl: string
+    certificateUrl?: string
   }
   variant?: 'progress' | 'completed' | 'recent'
 }

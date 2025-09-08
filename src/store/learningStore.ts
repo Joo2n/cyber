@@ -222,9 +222,15 @@ export const useLearningStore = create<LearningState>()(
               id: 'cert-1',
               userId,
               courseId: '2',
+              courseName: '데이터 분석 실무',
+              userName: '테스트 사용자',
+              instructorName: '박데이터',
               certificateNumber: 'TP-2024-001',
               issuedAt: '2024-08-10T15:30:00Z',
-              templateType: 'standard'
+              completionDate: '2024-08-10T15:30:00Z',
+              totalHours: 30,
+              templateType: 'basic',
+              status: 'active' as const
             }
           ]
 
@@ -275,9 +281,15 @@ export const useLearningStore = create<LearningState>()(
             id: `cert-${Date.now()}`,
             userId: 'current-user',
             courseId,
+            courseName: '과정명',
+            userName: '사용자명',
+            instructorName: '강사명',
             certificateNumber: `TP-${new Date().getFullYear()}-${String(certificates.length + 1).padStart(3, '0')}`,
             issuedAt: new Date().toISOString(),
-            templateType: 'standard'
+            completionDate: new Date().toISOString(),
+            totalHours: 0,
+            templateType: 'basic',
+            status: 'active' as const
           }
 
           set({

@@ -113,6 +113,7 @@ export interface Certificate {
   totalHours: number;
   templateType: 'basic' | 'premium' | 'professional';
   downloadUrl?: string;
+  certificateUrl?: string;
   status: 'active' | 'revoked';
 }
 

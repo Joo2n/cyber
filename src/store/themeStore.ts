@@ -52,7 +52,7 @@ export const useThemeStore = create<ThemeState>()(
     }),
     {
       name: 'theme-storage',
-      onRehydratedStorage: () => (state) => {
+      onRehydrateStorage: () => (state: any) => {
         // 페이지 로드 시 테마 적용
         if (state) {
           state.setTheme(state.theme)

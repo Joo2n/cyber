@@ -161,7 +161,14 @@ export const useAuthStore = create<AuthState>()(
           }
           
           // Mock 데이터에 추가
-          mockUsers.push({ ...newUser, password: userData.password })
+          mockUsers.push({ 
+            ...newUser, 
+            password: userData.password, 
+            phone: userData.phone || '',
+            role: newUser.role as any,
+            createdAt: newUser.createdAt as string,
+            lastLoginAt: newUser.lastLoginAt as string
+          })
           
           set({
             isAuthenticated: true,
