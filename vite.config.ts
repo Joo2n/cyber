@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/cyber/',
+  base: process.env.NODE_ENV === 'production' ? '/cyber/' : '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
